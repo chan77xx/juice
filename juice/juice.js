@@ -9,8 +9,23 @@ var JComponent = function() {
 /**
  * JUnitComponent
  */
-var JUnitComponent = function() {};
+var JUnitComponent = function() {
+    this.value = null;
+};
 JUnitComponent.prototype = new JCompoment();
+JUnitComponent.prototype.setValue = function(value) {
+    this.value = value;
+}
+JUnitComponent.prototype.getValue = function() {
+    return this.value;
+}
+
+/**
+ * JUnitComponent prototype
+ */
+var JText = function() {};
+JText.prototype = new JUnitComponent();
+
 
 /**
  * JCompositeComponent
@@ -18,7 +33,5 @@ JUnitComponent.prototype = new JCompoment();
 var JCompositeComponent = function() {};
 JCompositeComponent.prototype = new JCompoment();
 
-var JEdit = function() {};
-JEdit.prototype = new JUnitComponent();
 
 
